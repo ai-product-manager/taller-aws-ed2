@@ -1,0 +1,51 @@
+{
+  "botId": "TESTBOTID",
+  "botAliasId": "TESTALIASID",
+  "localeId": "es_419",
+  "sessionId": "test-make-001",
+  "invocationSource": "FulfillmentCodeHook",
+  "inputMode": "Text",
+  "inputTranscript": "Quiero reservar el 2025-09-01 a las 10:00",
+  "sessionState": {
+    "intent": {
+      "name": "MakeBooking",
+      "slots": {
+        "Date": {
+          "value": {
+            "interpretedValue": "2025-09-01"
+          }
+        },
+        "Time": {
+          "value": {
+            "interpretedValue": "10:00"
+          }
+        },
+        "Phone": {
+          "value": {
+            "interpretedValue": "+51987654321"
+          }
+        },
+        "Name": {
+          "value": {
+            "interpretedValue": "Carlos"
+          }
+        },
+        "Service": {
+          "value": {
+            "interpretedValue": "Mantenimiento"
+          }
+        },
+        "Plate": {
+          "value": {
+            "interpretedValue": "ABC-123"
+          }
+        },
+        "ShopId": {
+          "value": {
+            "interpretedValue": "Main"
+          }
+        }
+      }
+    }
+  }
+}

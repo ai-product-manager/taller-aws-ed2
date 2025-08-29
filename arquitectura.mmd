@@ -1,0 +1,12 @@
+sequenceDiagram
+    participant Usuario
+    participant LexV2
+    participant Lambda
+    participant DynamoDB
+
+    Usuario->>LexV2: Envía mensaje
+    LexV2->>Lambda: Invoca Lambda (validación + lógica)
+    Lambda->>DynamoDB: get/put (lectura/escritura)
+    DynamoDB-->>Lambda: Respuesta
+    Lambda-->>LexV2: Devuelve respuesta personalizada
+    LexV2-->>Usuario: Muestra respuesta final

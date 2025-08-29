@@ -1,0 +1,21 @@
+{
+  "botId": "TESTBOTID",
+  "botAliasId": "TESTALIASID",
+  "localeId": "es_419",
+  "sessionId": "test-cancel-001",
+  "invocationSource": "FulfillmentCodeHook",
+  "inputMode": "Text",
+  "inputTranscript": "Cancelar cita",
+  "sessionState": {
+    "intent": {
+      "name": "CancelBooking",
+      "slots": {
+        "AppointmentId": {
+          "value": {
+            "interpretedValue": "A-REEMPLAZAR"
+          }
+        }
+      }
+    }
+  }
+}
