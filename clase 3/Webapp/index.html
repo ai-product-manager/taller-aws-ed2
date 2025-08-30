@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Demo Lex + Polly (mínima)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+  <h1>Demo básica: Amazon Lex (texto) + Amazon Polly (voz)</h1>
+
+  <!-- Área de conversación simple -->
+  <div id="log" aria-live="polite"></div>
+
+  <!-- Entrada y botón -->
+  <input id="userInput" type="text" placeholder="Escribe aquí…">
+  <button id="sendBtn">Enviar</button>
+  <button id="resetBtn">Reiniciar sesión</button>
+
+  <!-- Carga del SDK v2 para navegador -->
+  <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1692.0.min.js"></script>
+
+  <!-- Tu lógica JS (solo funcionalidad) -->
+  <script src="./webapp.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "botId": "TESTBOTID",
+  "botAliasId": "TESTALIASID",
+  "localeId": "es_419",
+  "sessionId": "dlg-make-002",
+  "invocationSource": "DialogCodeHook",
+  "inputMode": "Text",
+  "inputTranscript": "Reservar mañana a las 10:00",
+  "sessionState": {
+    "intent": {
+      "name": "MakeBooking",
+      "slots": {
+        "Date":   { "value": { "interpretedValue": "2025-09-01" } },
+        "Time":   { "value": { "interpretedValue": "10:00" } },
+        "Phone":  null,
+        "Name":   { "value": { "interpretedValue": "Ana" } },
+        "Service":{ "value": { "interpretedValue": "Mantenimiento" } },
+        "Plate":  { "value": { "interpretedValue": "DEF-456" } },
+        "ShopId": { "value": { "interpretedValue": "Main" } }
+      }
+    }
+  }
+}

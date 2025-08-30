@@ -1,0 +1,23 @@
+{
+  "botId": "TESTBOTID",
+  "botAliasId": "TESTALIASID",
+  "localeId": "es_419",
+  "sessionId": "dlg-make-003",
+  "invocationSource": "DialogCodeHook",
+  "inputMode": "Text",
+  "inputTranscript": "Reservar el 2025-09-01 a las 08:00",
+  "sessionState": {
+    "intent": {
+      "name": "MakeBooking",
+      "slots": {
+        "Date":   { "value": { "interpretedValue": "2025-09-01" } },
+        "Time":   { "value": { "interpretedValue": "08:00" } },
+        "Phone":  { "value": { "interpretedValue": "+51999999999" } },
+        "Name":   { "value": { "interpretedValue": "Luis" } },
+        "Service":{ "value": { "interpretedValue": "Mantenimiento" } },
+        "Plate":  { "value": { "interpretedValue": "GHI-789" } },
+        "ShopId": { "value": { "interpretedValue": "Main" } }
+      }
+    }
+  }
+}

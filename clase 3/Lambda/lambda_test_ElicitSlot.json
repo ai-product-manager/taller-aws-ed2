@@ -1,0 +1,23 @@
+{
+  "botId": "TESTBOTID",
+  "botAliasId": "TESTALIASID",
+  "localeId": "es_419",
+  "sessionId": "dlg-make-001",
+  "invocationSource": "DialogCodeHook",
+  "inputMode": "Text",
+  "inputTranscript": "Quiero reservar mantenimiento para mañana",
+  "sessionState": {
+    "intent": {
+      "name": "MakeBooking",
+      "slots": {
+        "Date":   { "value": { "interpretedValue": "2025-09-01" } },
+        "Time":   null,
+        "Phone":  { "value": { "interpretedValue": "987654321" } },
+        "Name":   { "value": { "interpretedValue": "Carlitos" } },
+        "Service":{ "value": { "interpretedValue": "Mantenimiento" } },
+        "Plate":  { "value": { "interpretedValue": "ABC-123" } },
+        "ShopId": { "value": { "interpretedValue": "Main" } }
+      }
+    }
+  }
+}

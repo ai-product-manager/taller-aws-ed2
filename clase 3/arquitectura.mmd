@@ -1,0 +1,29 @@
+sequenceDiagram
+    autonumber
+    participant Usuario
+    participant WebApp as WebApp (Browser)
+    participant Cognito as Cognito Identity Pool
+    participant LexV2 as Amazon Lex V2 (Runtime)
+    participant Lambda as AWS Lambda (Fulfillment)
+    participant DynamoDB
+    participant Polly as Amazon Polly (TTS)
+    participant Audio as Reproductor de audio
+    %% Inicio: WebApp obtiene credenciales seguras
+    Usuario->>WebApp: Abre la app / Envía mensaje de texto
+    WebApp->>Cognito: Solicita credenciales temporales (guest/auth)
+    Cognito-->>WebApp: Devuelve credenciales IAM temporales (STS)
+    %% Conversación (texto)
+    Note over WebApp,LexV2: Reusar el mismo sessionId para mantener memoria (estado de sesión).
+    WebApp->>LexV2: RecognizeText(botId, aliasId, localeId, sessionId, text)
+    LexV2->>Lambda: Invoca fulfillment (evento con intent/slots/sessionState)
+    Lambda->>DynamoDB: get/put (lectura/escritura)
+    DynamoDB-->>Lambda: Respuesta
+    Lambda-->>LexV2: Mensaje final (texto) + estado/slots
+    %% Síntesis de voz
+    LexV2-->>WebApp: Devuelve messages[] (texto de respuesta)
+    WebApp->>Polly: SynthesizeSpeech(Text, VoiceId=es-MX “Mia”, Engine=neural*)
+    Polly-->>WebApp: AudioStream (MP3)
+    WebApp->>Audio: Reproducir audio (respuesta hablada)
+    Audio-->>Usuario: Voz en Español LatAm
+    %% (Opcional) depuración/estado
+    WebApp-->>LexV2: GetSession(sessionId) para inspeccionar estado/slots (debug) 
