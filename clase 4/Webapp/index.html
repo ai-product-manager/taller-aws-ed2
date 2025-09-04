@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Asistente Taller Mecánico (Lex + Polly)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="webapp.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <header>
+    <h1>Asistente Taller Mecánico (Lex + Polly)</h1>
+  </header>
+
+  <main>
+    <div class="card">
+      <div class="tips">
+        Escribe un mensaje para comenzar. Ejemplos:
+        <ul>
+          <li>Quiero reservar mantenimiento mañana a las 10</li>
+          <li>¿Qué horarios tienen hoy?</li>
+          <li>Cancela mi cita A-12345678</li>
+        </ul>
+      </div>
+
+      <div class="toolbar">
+        <span class="pill"><input type="checkbox" id="voice" checked> 🔊 Voz</span>
+        <span class="pill small" id="sessionPill">session: —</span>
+        <button id="resetBtn" class="small" style="background:#334155;border-color:#334155">Reiniciar sesión</button>
+      </div>
+
+      <div id="chat" class="chat"></div>
+    </div>
+  </main>
+
+  <div class="inputbar">
+    <div class="input">
+      <input id="userInput" type="text" placeholder="Ej: Quiero reservar mantenimiento mañana a las 10" />
+      <button id="sendBtn">Enviar</button>
+    </div>
+  </div>
+
+  <!-- AWS SDK v2 (browser) -->
+  <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1692.0.min.js"></script>
+  <!-- Tu lógica -->
+  <script src="./webapp.js"></script>
+</body>
+</html>

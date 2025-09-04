@@ -1,0 +1,138 @@
+:root {
+  --bg: #0b0d10;
+  --card: #12161b;
+  --muted: #8ca3b0;
+  --text: #eaf2f8;
+  --accent: #22c55e;
+  --bubble: #1b222a;
+  --me: #2b3340;
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #f6f8fb;
+    --card: #ffffff;
+    --muted: #667085;
+    --text: #0b1220;
+    --accent: #16a34a;
+    --bubble: #f1f5f9;
+    --me: #e2e8f0;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.5 system-ui, Segoe UI, Roboto, Arial;
+}
+header {
+  position: sticky;
+  top: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.35), transparent),
+    var(--bg);
+  backdrop-filter: blur(8px);
+  padding: 16px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+h1 {
+  margin: 0;
+  font-size: 18px;
+}
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 12px 20px 96px;
+}
+.card {
+  background: var(--card);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 14px;
+}
+.tips {
+  color: var(--muted);
+  font-size: 14px;
+}
+.chat {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 12px;
+}
+.msg {
+  max-width: 80%;
+  padding: 10px 12px;
+  border-radius: 14px;
+}
+.bot {
+  background: var(--bubble);
+  border-top-left-radius: 4px;
+}
+.me {
+  background: var(--me);
+  border-top-right-radius: 4px;
+  margin-left: auto;
+}
+.row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.pill {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: var(--bubble);
+  color: var(--muted);
+  font-size: 12px;
+}
+.inputbar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--card);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 12px 20px;
+}
+.input {
+  display: flex;
+  gap: 10px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+input[type="text"] {
+  flex: 1;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: var(--bubble);
+  color: var(--text);
+  outline: none;
+}
+button {
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: var(--accent);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+button[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.toolbar {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+.small {
+  font-size: 12px;
+}
